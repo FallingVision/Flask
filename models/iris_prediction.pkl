@@ -1,0 +1,11 @@
+from sklearn.externals import joblib
+from sklearn import datasets
+from sklearn import svm
+import pickle
+iris = datasets.load_iris()
+
+classifier = svm.SVC()
+classifier.fit(iris.data, iris.target)
+
+with open('model.pkl', 'wb') as model_file:
+    pickle.dump(classifier, model_file)
