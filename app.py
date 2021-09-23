@@ -16,10 +16,10 @@ normalize = transforms.Compose(
 
 app = Flask(__name__)
 
-@app.route('/test', methods=['GET'])
-def hello():
-    print('hello!')
-    return 'hello'
+# @app.route('/test', methods=['GET'])
+# def hello():
+#     print('hello!')
+#     return 'hello'
 
 @app.route('/inference', methods=['POST'])
 def inference():
