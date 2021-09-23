@@ -1,12 +1,19 @@
 from PIL import Image
 import numpy as np
 from tensorflow.keras.applications import EfficientNetB0
-from keras.models import Sequential, load_model
+from keras.models import Sequential
 from keras.layers import Dropout, Dense, GlobalAveragePooling2D
 from tensorflow.keras.optimizers import Adam, SGD
 import pickle as plk
 import warnings
+import os
+
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' 
 warnings.filterwarnings("ignore")
+
+TEST_IMAGE_PATH = '../test/'
+DATA_PATH = '../../data/cifar-100-python'
+
 
 '''
 0) Pickle File -> Dicktionary
@@ -48,7 +55,6 @@ def outputLabelToCategoryText(output):
     target_idx = np.argmax(output)
 
     # Meta Data
-    DATA_PATH = '../../data/cifar-100-python'
     metaData = unpickle(DATA_PATH+'/meta')
 
     origin_label = [0, 2, 5, 8, 9, 10, 11, 12, 13, 16, 17, 20, 22, 25, 28, 35, 37, 
@@ -102,7 +108,6 @@ def predictLabel(img):
 '''
 [TEST Code]
 '''
-TEST_IMAGE_PATH = '../test/'
 testList = [
     # Image.open('../../test/test1.jpeg'),
     # Image.open('../../test/test2.jpeg'),
