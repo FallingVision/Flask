@@ -16,6 +16,11 @@ normalize = transforms.Compose(
 
 app = Flask(__name__)
 
+@app.route('/test', methods=['GET'])
+def test():
+    print('test success')
+    return 'test success'
+
 
 @app.route('/inference', methods=['POST'])
 def inference():
