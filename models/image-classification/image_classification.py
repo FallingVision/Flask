@@ -102,14 +102,15 @@ def predictLabel(img):
 '''
 [TEST Code]
 '''
+TEST_IMAGE_PATH = '../test/'
 testList = [
     # Image.open('../../test/test1.jpeg'),
     # Image.open('../../test/test2.jpeg'),
     # Image.open('../../test/test3.jpeg'),
-    Image.open('../../test/test1.jpeg'),
-    Image.open('../../test/test5.jpeg'),
-    Image.open('../../test/test6.jpeg'),
-    Image.open('../../test/test7.jpeg')
+    Image.open(TEST_IMAGE_PATH + 'test2.jpg'),
+    Image.open(TEST_IMAGE_PATH + 'test3.jpg'),
+    Image.open(TEST_IMAGE_PATH + 'test4.jpg'),
+    Image.open(TEST_IMAGE_PATH + 'test5.jpg')
     ]
 
 for each in testList:
