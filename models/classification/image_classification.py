@@ -8,11 +8,13 @@ import pickle as plk
 import warnings
 import os
 
+
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' 
 warnings.filterwarnings("ignore")
 
-TEST_IMAGE_PATH = '../test/'
-DATA_PATH = '../../data/cifar-100-python'
+TEST_IMAGE_PATH = './models/test'
+DATA_PATH = './data/cifar-100-python'
+MODEL_PATH = './models/classification/cifar_efficientnetb0_weights.h5'
 
 
 '''
@@ -85,40 +87,59 @@ def loadEfficientNetModel():
 
     # model.summary()
     optimizer = Adam(lr=0.0001)
-    model.load_weights('./cifar_efficientnetb0_weights.h5')
+    model.load_weights(MODEL_PATH)
 
     # model compiling
     model.compile(optimizer=optimizer, loss='categorical_crossentropy', metrics=['accuracy'])
 
     return model
 
-'''
-5) Predict Category
-'''
-def predictLabel(img):
-    target_img_arr = imageFileToNumpyArr(img)
+class bcolors:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKCYAN = '\033[96m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+
+''' ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+5) Main Function - Predict Category
+''' ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+def predictLabel(targetImg):
+    ''' 1) <image name>.png or <image name>.jpg 형태의 이미지를 numpy.nd.array 로 변환 '''
+    target_img_arr = imageFileToNumpyArr(targetImg)
+
+    ''' 2) Transfer Learning 된 EfficientNetB0 Model Load '''
     model = loadEfficientNetModel()
-  
     predict_result = model.predict(target_img_arr)
+
+    ''' 3) Category Predict '''
     category = outputLabelToCategoryText(predict_result[0])
+    print(f"{bcolors.OKGREEN}SUCCESS: {bcolors.ENDC}", f"{bcolors.BOLD}{category}{bcolors.ENDC}" )
 
     return category
 
 
 '''
 [TEST Code]
+5) 의 함수를 테스트 코드 형태로 작성, input image 가 존재하지 않음.
 '''
 testList = [
     # Image.open('../../test/test1.jpeg'),
     # Image.open('../../test/test2.jpeg'),
     # Image.open('../../test/test3.jpeg'),
-    Image.open(TEST_IMAGE_PATH + 'test2.jpg'),
-    Image.open(TEST_IMAGE_PATH + 'test3.jpg'),
-    Image.open(TEST_IMAGE_PATH + 'test4.jpg'),
-    Image.open(TEST_IMAGE_PATH + 'test5.jpg')
+    Image.open('/home/beobwoo/school/Flask/models/test/test3.jpg'),
+    # Image.open(TEST_IMAGE_PATH + '/test3.jpg'),
+    # Image.open(TEST_IMAGE_PATH + '/test4.jpg'),
+    # Image.open(TEST_IMAGE_PATH + '/test5.jpg')
     ]
 
-for each in testList:
-    category = predictLabel(each)
-    print('[Predict Category Name] ', category)
-''' ''' ''' ''' ''' ''' ''' ''' ''' '''
+def testPredictLabel():
+    return predictLabel(testList[0])
+
+# for each in testList:
+#     category = predictLabel(each)
+#     print('[Predict Category Name] ', category)

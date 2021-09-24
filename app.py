@@ -5,7 +5,8 @@ from torchvision import transforms
 from flask import Flask, jsonify, request
 
 from model import CNN
-
+from models.classification.image_classification import testPredictLabel
+import os
 
 model = CNN()
 model.load_state_dict(torch.load('mnist_model.pt'), strict=False)
@@ -15,6 +16,16 @@ normalize = transforms.Compose(
     [transforms.ToTensor(), transforms.Normalize((0.1307,), (0.3081,))])
 
 app = Flask(__name__)
+
+'''
+(GET) image classification model test router
+'''
+@app.route('/image-classification-test', methods=['GET'])
+def imageClassficiatonTest():
+    category = testPredictLabel()
+    
+    # realCategory = predictLabel(img)
+    return category
 
 
 @app.route('/inference', methods=['POST'])
