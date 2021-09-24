@@ -28,6 +28,7 @@ def uploadImage(file=None):
     if request.method == 'POST':
         pic_data = request.get_data().decode('utf-8')
     
+    print('Upload Image Start')
     im = Image.open(BytesIO(base64.b64decode(pic_data)))
     im.save('image/origin_image.png' ,'PNG')
 
