@@ -131,7 +131,7 @@ testList = [
     # Image.open('../../test/test1.jpeg'),
     # Image.open('../../test/test2.jpeg'),
     # Image.open('../../test/test3.jpeg'),
-    Image.open('/home/beobwoo/school/Flask/models/test/test3.jpg'),
+    Image.open('./models/test/test3.jpg'),
     # Image.open(TEST_IMAGE_PATH + '/test3.jpg'),
     # Image.open(TEST_IMAGE_PATH + '/test4.jpg'),
     # Image.open(TEST_IMAGE_PATH + '/test5.jpg')
