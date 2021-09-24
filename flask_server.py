@@ -37,11 +37,12 @@ def hello():
     print('hello!')
     return 'hello'
 
+
 @app.route('/upload-image', methods=['POST'])
 def uploadImage(file=None):
     if request.method == 'POST':
         pic_data = request.get_data().decode('utf-8')
-    
+
     print('Upload Image Start')
     SAVED_IMAGE_PATH = 'image/origin_image.png'
     im = Image.open(BytesIO(base64.b64decode(pic_data)))
@@ -67,7 +68,7 @@ def uploadImage(file=None):
     print(f"{bcolors.OKGREEN}SUCCESS: {bcolors.ENDC}", f"{bcolors.BOLD}{kakao_output}{bcolors.ENDC}" )
     
     return 'ok'
-    
+
 
 @app.route('/inference', methods=['POST'])
 def inference():
