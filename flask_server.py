@@ -20,8 +20,8 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 def text():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--image_folder', required=True,
-                        help='path to image_folder which contains text images', default='./test_folder')
+    parser.add_argument('--image_folder', type=str,
+                        help='path to image_folder which contains text images')
     parser.add_argument('--workers', type=int,
                         help='number of data loading workers', default=4)
     parser.add_argument('--batch_size', type=int,
@@ -67,9 +67,9 @@ def text():
         # same with ASTER setting (use 94 char).
         opt.character = string.printable[:-6]
 
-    cudnn.benchmark = True
-    cudnn.deterministic = True
-    opt.num_gpu = torch.cuda.device_count()
+    # cudnn.benchmark = True
+    # cudnn.deterministic = True
+    # opt.num_gpu = torch.cuda.device_count()
 
     demo(opt)
     return 'hello'
