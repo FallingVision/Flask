@@ -19,26 +19,30 @@ normalize = transforms.Compose(
 
 app = Flask(__name__)
 
+
 @app.route('/test', methods=['GET'])
 def hello():
     print('hello!')
     return 'hello'
 
+
 @app.route('/upload-image', methods=['POST'])
 def uploadImage(file=None):
     if request.method == 'POST':
         pic_data = request.get_data().decode('utf-8')
-    
+
     print('Upload Image Start')
     im = Image.open(BytesIO(base64.b64decode(pic_data)))
-    im.save('image/origin_image.png' ,'PNG')
+    im.rotate(270)
+    im.save('image/origin_image.png', 'PNG')
 
     # 1) Image Classification Model
     category = predictLabel(im)
 
-    
+    # 2) Kakao API
+
     return 'ok'
-    
+
 
 @app.route('/inference', methods=['POST'])
 def inference():
