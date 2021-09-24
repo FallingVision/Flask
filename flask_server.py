@@ -1,5 +1,3 @@
-from dataset import RawDataset, AlignCollate
-from utils import CTCLabelConverter, AttnLabelConverter
 import torch.nn.functional as F
 import torch.utils.data
 import torch.backends.cudnn as cudnn
@@ -72,7 +70,7 @@ def demo(opt):
 @app.route('/test', methods=['GET'])
 def hello():
     #MODEL_PATH = './best_accuracy.pth'
-    # device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    #device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
     # checkpoint = torch.load(MODEL_PATH, map_location="cpu")
     # optimizer = SGD(model, 0.1)
