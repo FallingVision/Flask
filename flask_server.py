@@ -7,6 +7,7 @@ from io import BytesIO
 import base64
 
 from model import CNN
+from models.classification.image_classification import predictLabel
 
 
 model = CNN()
@@ -32,8 +33,10 @@ def uploadImage(file=None):
     im = Image.open(BytesIO(base64.b64decode(pic_data)))
     im.save('image/origin_image.png' ,'PNG')
 
-    # 이미지 사이즈 변환
+    # 1) Image Classification Model
+    category = predictLabel(im)
 
+    
     return 'ok'
     
 
