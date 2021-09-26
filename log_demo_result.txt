@@ -1,17 +1,36 @@
 --------------------------------------------------------------------------------
 image_path               	predicted_labels         	confidence score
 --------------------------------------------------------------------------------
-./test_folder/test_image.jpg	d                        	0.0000
+./image/origin_image.png 	8                        	0.0000
+./image/origin_image.png_resized.jpg	8                        	0.0000
 --------------------------------------------------------------------------------
 image_path               	predicted_labels         	confidence score
 --------------------------------------------------------------------------------
-./textrecognition/demo_image/demo_1.png	lm                       	0.0000
-./textrecognition/demo_image/demo_2.jpg	lm                       	0.0000
-./textrecognition/demo_image/demo_3.png	lm                       	0.0000
-./textrecognition/demo_image/demo_4.png	lm                       	0.0000
-./textrecognition/demo_image/demo_5.png	lm                       	0.0000
-./textrecognition/demo_image/demo_6.png	lm                       	0.0000
-./textrecognition/demo_image/demo_7.png	lm                       	0.0000
-./textrecognition/demo_image/demo_8.jpg	lm                       	0.0000
-./textrecognition/demo_image/demo_9.jpg	lm                       	0.0000
-./textrecognition/demo_image/demo_10.jpg	lm                       	0.0000
+./image/origin_image.png 	u                        	0.0000
+./image/origin_image.png_resized.jpg	u                        	0.0000
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+./textrecognition/demo_image/demo_1.png	l4                       	0.0000
+./textrecognition/demo_image/demo_2.jpg	l4                       	0.0000
+./textrecognition/demo_image/demo_3.png	l4                       	0.0000
+./textrecognition/demo_image/demo_4.png	l4                       	0.0000
+./textrecognition/demo_image/demo_5.png	l4                       	0.0000
+./textrecognition/demo_image/demo_6.png	l4                       	0.0000
+./textrecognition/demo_image/demo_7.png	l4                       	0.0000
+./textrecognition/demo_image/demo_8.jpg	l4                       	0.0000
+./textrecognition/demo_image/demo_9.jpg	l4                       	0.0000
+./textrecognition/demo_image/demo_10.jpg	l4                       	0.0000
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+./textrecognition/demo_image/demo_1.png	2                        	0.0000
+./textrecognition/demo_image/demo_2.jpg	2                        	0.0000
+./textrecognition/demo_image/demo_3.png	2                        	0.0000
+./textrecognition/demo_image/demo_4.png	2                        	0.0000
+./textrecognition/demo_image/demo_5.png	2                        	0.0000
+./textrecognition/demo_image/demo_6.png	2                        	0.0000
+./textrecognition/demo_image/demo_7.png	2                        	0.0000
+./textrecognition/demo_image/demo_8.jpg	2                        	0.0000
+./textrecognition/demo_image/demo_9.jpg	2                        	0.0000
+./textrecognition/demo_image/demo_10.jpg	2                        	0.0000
