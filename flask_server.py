@@ -7,9 +7,13 @@ from io import BytesIO
 import base64
 import cv2
 import requests
-
+import json
 from model import CNN
 from models.classification.image_classification import predictLabel
+
+LIMIT_PX = 1024
+LIMIT_BYTE = 1024*1024
+LIMIT_BOX = 40
 
 
 model = CNN()
@@ -20,6 +24,7 @@ normalize = transforms.Compose(
     [transforms.ToTensor(), transforms.Normalize((0.1307,), (0.3081,))])
 
 app = Flask(__name__)
+
 
 class bcolors:
     HEADER = '\033[95m'
@@ -32,6 +37,23 @@ class bcolors:
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
 
+
+def kakao_ocr_resize(image_path: str):
+    image = cv2.imread(image_path)
+    height, width, _ = image.shape
+    print(f"heigth : {height}, width: {width}")
+
+    if LIMIT_PX < height or LIMIT_PX < width:
+        ratio = float(LIMIT_PX)/max(height, width)
+        image = cv2.resize(image, None, fx=ratio, fy=ratio)
+        height, width, _ = height, width, _ = image.shape
+
+        image_path = "{}_resized.jpg".format(image_path)
+        cv2.imwrite(image_path, image)
+        return image_path
+    return None
+
+
 @app.route('/test', methods=['GET'])
 def hello():
     print('hello!')
@@ -43,31 +65,46 @@ def uploadImage(file=None):
     if request.method == 'POST':
         pic_data = request.get_data().decode('utf-8')
 
-    print('Upload Image Start')
-    SAVED_IMAGE_PATH = 'image/origin_image.png'
+    SAVED_IMAGE_PATH = 'image/origin_image.jpg'
     im = Image.open(BytesIO(base64.b64decode(pic_data)))
-    im.save(SAVED_IMAGE_PATH ,'PNG')
+    im.save(SAVED_IMAGE_PATH)
 
     # 1) Image Classification Model
     category = predictLabel(im)
-    
-    im.resize((1024, 1024))
-    im.save(SAVED_IMAGE_PATH ,'PNG')
+
+    # im.resize((100, 100))
+    #im.save(SAVED_IMAGE_PATH, 'PNG')
 
     # 2) Kakao API 로 Text 검출 -> 가장 Height 큰 Text Return (임시)
-    APP_KEY = '6a8361ba43e7da5ac8e1e90799287e0c'
+    APP_KEY = 'af23d4b5ea3248412227a7bce9609752'
     API_URL = 'https://dapi.kakao.com/v2/vision/text/ocr'
-    headers = {'Authorization' : 'KakaAK {}'.format(APP_KEY)}
-    
-    kakao_img = cv2.imread(SAVED_IMAGE_PATH)
-    peng_kakao_img = cv2.imencode(".png", kakao_img)[1]
+    headers = {'Authorization': 'KakaoAK {}'.format(APP_KEY)}
+
+    resize_impath = kakao_ocr_resize(SAVED_IMAGE_PATH)
+    kakao_img = cv2.imread(resize_impath)
+    peng_kakao_img = cv2.imencode(".jpg", kakao_img)[1]
     data = peng_kakao_img.tobytes()
-    
-    kakao_output = requests.post(API_URL, headers=headers, files={"image":data}).json()
-    
-    print(f"{bcolors.OKGREEN}SUCCESS: {bcolors.ENDC}", f"{bcolors.BOLD}{kakao_output}{bcolors.ENDC}" )
-    
-    return 'ok'
+
+    kakao_output = requests.post(
+        API_URL, headers=headers, files={"image": data}).json()
+    #kakao_output_json = kakao_output
+    # print("[OCR] output:\n{}\n".format(json.))
+    print(f"{bcolors.OKGREEN}SUCCESS: {bcolors.ENDC}",
+          f"{bcolors.BOLD}{kakao_output}{bcolors.ENDC}")
+    # print(kakao_output['result'])
+    temp = kakao_output['result'][0]['boxes'][2][1] - \
+        kakao_output['result'][0]['boxes'][1][1]
+    print(temp)
+    product_name = kakao_output['result'][0]['recognition_words'][0]
+    for i in range(1, len(kakao_output['result'])):
+        temp2 = kakao_output['result'][i]['boxes'][2][1] - \
+            kakao_output['result'][i]['boxes'][1][1]
+        if(temp < temp2):
+            temp = temp2
+            product_name = kakao_output['result'][i]['recognition_words'][0]
+    data = json.dumps({"category": category, "text": product_name})
+    print(product_name)
+    return data
 
 
 @app.route('/inference', methods=['POST'])
