@@ -1,80 +1,62 @@
 --------------------------------------------------------------------------------
 image_path               	predicted_labels         	confidence score
 --------------------------------------------------------------------------------
-./image/origin_image.png 	8                        	0.0000
-./image/origin_image.png_resized.jpg	8                        	0.0000
+textrecognition/demo_image/demo_1.png	ca                       	0.0066
+textrecognition/demo_image/demo_2.jpg	이리                       	0.0005
+textrecognition/demo_image/demo_3.png	s이                       	0.0007
+textrecognition/demo_image/demo_4.png	saae                     	0.0001
+textrecognition/demo_image/demo_5.png	co                       	0.0016
+textrecognition/demo_image/demo_6.png	saa                      	0.0011
+textrecognition/demo_image/demo_7.png	coai                     	0.0001
+textrecognition/demo_image/demo_8.jpg	이이                       	0.0008
+textrecognition/demo_image/demo_9.jpg	이리                       	0.0006
+textrecognition/demo_image/demo_10.jpg	이이                       	0.0012
 --------------------------------------------------------------------------------
 image_path               	predicted_labels         	confidence score
 --------------------------------------------------------------------------------
-./image/origin_image.png 	u                        	0.0000
-./image/origin_image.png_resized.jpg	u                        	0.0000
+textrecognition/demo_image/demo_1.png	ca                       	0.0066
+textrecognition/demo_image/demo_2.jpg	이리                       	0.0005
+textrecognition/demo_image/demo_3.png	s이                       	0.0007
+textrecognition/demo_image/demo_4.png	saae                     	0.0001
+textrecognition/demo_image/demo_5.png	co                       	0.0016
+textrecognition/demo_image/demo_6.png	saa                      	0.0011
+textrecognition/demo_image/demo_7.png	coai                     	0.0001
+textrecognition/demo_image/demo_8.jpg	이이                       	0.0008
+textrecognition/demo_image/demo_9.jpg	이리                       	0.0006
+textrecognition/demo_image/demo_10.jpg	이이                       	0.0012
 --------------------------------------------------------------------------------
 image_path               	predicted_labels         	confidence score
 --------------------------------------------------------------------------------
-./textrecognition/demo_image/demo_1.png	l4                       	0.0000
-./textrecognition/demo_image/demo_2.jpg	l4                       	0.0000
-./textrecognition/demo_image/demo_3.png	l4                       	0.0000
-./textrecognition/demo_image/demo_4.png	l4                       	0.0000
-./textrecognition/demo_image/demo_5.png	l4                       	0.0000
-./textrecognition/demo_image/demo_6.png	l4                       	0.0000
-./textrecognition/demo_image/demo_7.png	l4                       	0.0000
-./textrecognition/demo_image/demo_8.jpg	l4                       	0.0000
-./textrecognition/demo_image/demo_9.jpg	l4                       	0.0000
-./textrecognition/demo_image/demo_10.jpg	l4                       	0.0000
+textrecognition/demo_image/demo_1.png	ca                       	0.0066
+textrecognition/demo_image/demo_2.jpg	이리                       	0.0005
+textrecognition/demo_image/demo_3.png	s이                       	0.0007
+textrecognition/demo_image/demo_4.png	saae                     	0.0001
+textrecognition/demo_image/demo_5.png	co                       	0.0016
+textrecognition/demo_image/demo_6.png	saa                      	0.0011
+textrecognition/demo_image/demo_7.png	coai                     	0.0001
+textrecognition/demo_image/demo_8.jpg	이이                       	0.0008
+textrecognition/demo_image/demo_9.jpg	이리                       	0.0006
+textrecognition/demo_image/demo_10.jpg	이이                       	0.0012
 --------------------------------------------------------------------------------
 image_path               	predicted_labels         	confidence score
 --------------------------------------------------------------------------------
-./textrecognition/demo_image/demo_1.png	2                        	0.0000
-./textrecognition/demo_image/demo_2.jpg	2                        	0.0000
-./textrecognition/demo_image/demo_3.png	2                        	0.0000
-./textrecognition/demo_image/demo_4.png	2                        	0.0000
-./textrecognition/demo_image/demo_5.png	2                        	0.0000
-./textrecognition/demo_image/demo_6.png	2                        	0.0000
-./textrecognition/demo_image/demo_7.png	2                        	0.0000
-./textrecognition/demo_image/demo_8.jpg	2                        	0.0000
-./textrecognition/demo_image/demo_9.jpg	2                        	0.0000
-./textrecognition/demo_image/demo_10.jpg	2                        	0.0000
+image/origin_image.png   	이                        	0.0213
+image/origin_image.png_resized.jpg	이리                       	0.0005
 --------------------------------------------------------------------------------
 image_path               	predicted_labels         	confidence score
 --------------------------------------------------------------------------------
-./image/origin_image.png 	i                        	0.0000
-./image/origin_image.png_resized.jpg	i                        	0.0000
+image/KakaoTalk_Photo_2021-09-28-21-48-46.jpeg	이                        	0.0166
+image/origin_image.png   	이                        	0.0213
+image/origin_image.png_resized.jpg	이리                       	0.0005
 --------------------------------------------------------------------------------
 image_path               	predicted_labels         	confidence score
 --------------------------------------------------------------------------------
-./textrecognition/demo_image/demo_1.png	c                        	0.0000
-./textrecognition/demo_image/demo_2.jpg	c                        	0.0000
-./textrecognition/demo_image/demo_3.png	c                        	0.0000
-./textrecognition/demo_image/demo_4.png	c                        	0.0000
-./textrecognition/demo_image/demo_5.png	c                        	0.0000
-./textrecognition/demo_image/demo_6.png	c                        	0.0000
-./textrecognition/demo_image/demo_7.png	c                        	0.0000
-./textrecognition/demo_image/demo_8.jpg	c                        	0.0000
-./textrecognition/demo_image/demo_9.jpg	c                        	0.0000
-./textrecognition/demo_image/demo_10.jpg	c                        	0.0000
+image/KakaoTalk_Image_2021-09-28-21-52-48.jpeg	이                        	0.0215
+image/origin_image.png   	이                        	0.0213
+image/origin_image.png_resized.jpg	이리                       	0.0005
 --------------------------------------------------------------------------------
 image_path               	predicted_labels         	confidence score
 --------------------------------------------------------------------------------
-./textrecognition/demo_image/demo_1.png	툼                        	0.0000
-./textrecognition/demo_image/demo_2.jpg	툼                        	0.0000
-./textrecognition/demo_image/demo_3.png	툼                        	0.0000
-./textrecognition/demo_image/demo_4.png	툼                        	0.0000
-./textrecognition/demo_image/demo_5.png	툼                        	0.0000
-./textrecognition/demo_image/demo_6.png	툼                        	0.0000
-./textrecognition/demo_image/demo_7.png	툼                        	0.0000
-./textrecognition/demo_image/demo_8.jpg	툼                        	0.0000
-./textrecognition/demo_image/demo_9.jpg	툼                        	0.0000
-./textrecognition/demo_image/demo_10.jpg	툼                        	0.0000
---------------------------------------------------------------------------------
-image_path               	predicted_labels         	confidence score
---------------------------------------------------------------------------------
-./textrecognition/demo_image/demo_1.png	루쫓                       	0.0000
-./textrecognition/demo_image/demo_2.jpg	루쫓                       	0.0000
-./textrecognition/demo_image/demo_3.png	루쫓                       	0.0000
-./textrecognition/demo_image/demo_4.png	루쫓                       	0.0000
-./textrecognition/demo_image/demo_5.png	쫓                        	0.0000
-./textrecognition/demo_image/demo_6.png	쫓                        	0.0000
-./textrecognition/demo_image/demo_7.png	루쫓                       	0.0000
-./textrecognition/demo_image/demo_8.jpg	루쫓                       	0.0000
-./textrecognition/demo_image/demo_9.jpg	루쫓                       	0.0000
-./textrecognition/demo_image/demo_10.jpg	루쫓                       	0.0000
+image/KakaoTalk_Image_2021-09-28-21-52-48.jpeg	이                        	0.0215
+image/origin_image.png   	이                        	0.0213
+image/origin_image.png_resized.jpg	이리                       	0.0005
