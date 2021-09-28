@@ -41,7 +41,6 @@ class bcolors:
 def kakao_ocr_resize(image_path: str):
     image = cv2.imread(image_path)
     height, width, _ = image.shape
-    print(f"heigth : {height}, width: {width}")
 
     if LIMIT_PX < height or LIMIT_PX < width:
         ratio = float(LIMIT_PX)/max(height, width)
@@ -72,9 +71,6 @@ def uploadImage(file=None):
     # 1) Image Classification Model
     category = predictLabel(im)
 
-    # im.resize((100, 100))
-    #im.save(SAVED_IMAGE_PATH, 'PNG')
-
     # 2) Kakao API 로 Text 검출 -> 가장 Height 큰 Text Return (임시)
     APP_KEY = 'af23d4b5ea3248412227a7bce9609752'
     API_URL = 'https://dapi.kakao.com/v2/vision/text/ocr'
@@ -87,23 +83,38 @@ def uploadImage(file=None):
 
     kakao_output = requests.post(
         API_URL, headers=headers, files={"image": data}).json()
-    #kakao_output_json = kakao_output
-    # print("[OCR] output:\n{}\n".format(json.))
-    print(f"{bcolors.OKGREEN}SUCCESS: {bcolors.ENDC}",
-          f"{bcolors.BOLD}{kakao_output}{bcolors.ENDC}")
-    # print(kakao_output['result'])
-    temp = kakao_output['result'][0]['boxes'][2][1] - \
-        kakao_output['result'][0]['boxes'][1][1]
-    print(temp)
-    product_name = kakao_output['result'][0]['recognition_words'][0]
+        
+ 
+
     for i in range(1, len(kakao_output['result'])):
-        temp2 = kakao_output['result'][i]['boxes'][2][1] - \
-            kakao_output['result'][i]['boxes'][1][1]
-        if(temp < temp2):
-            temp = temp2
-            product_name = kakao_output['result'][i]['recognition_words'][0]
-    data = json.dumps({"category": category, "text": product_name})
-    print(product_name)
+        if len(kakao_output['result'][i]['recognition_words'][0]) == 0 :
+            kakao_output['result'].pop(i)
+
+
+    extract_text_list = [o['recognition_words'] for o in kakao_output['result']]
+
+    print(f"{bcolors.OKGREEN}SUCCESS: {bcolors.ENDC}",
+          f"{bcolors.BOLD}{extract_text_list}{bcolors.ENDC}")
+    
+    temp_idx = 0
+    
+    if len(kakao_output['result']) > 0 and len(kakao_output['result'][0]) > 0 :
+        temp = kakao_output['result'][0]['boxes'][2][1] - \
+        kakao_output['result'][0]['boxes'][1][1] 
+        
+        product_name = kakao_output['result'][0]['recognition_words'][0]
+    
+        for i in range(1, len(kakao_output['result'])):
+            temp2 = kakao_output['result'][i]['boxes'][2][1] - \
+                kakao_output['result'][i]['boxes'][1][1]
+            if(temp < temp2):
+                temp = temp2
+                temp_idx = i
+                
+        data = json.dumps({"category": category, "main_text_idx": temp_idx, "text_list": extract_text_list, "error": False})
+    else :
+        data = json.dumps({"category": category, "main_text_idx": temp_idx, "text_list": [], "error": True})
+
     return data
 
 

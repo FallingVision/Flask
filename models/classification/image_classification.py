@@ -1,8 +1,10 @@
 from PIL import Image
 import numpy as np
 from tensorflow.keras.applications import EfficientNetB0
-from keras.models import Sequential
-from keras.layers import Dropout, Dense, GlobalAveragePooling2D
+# from tensorflow import keras
+# from tensorflow import keras
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dropout, Dense, GlobalAveragePooling2D, LayerNormalization
 from tensorflow.keras.optimizers import Adam, SGD
 import pickle as plk
 import warnings
