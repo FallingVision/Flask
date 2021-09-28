@@ -34,3 +34,47 @@ image_path               	predicted_labels         	confidence score
 ./textrecognition/demo_image/demo_8.jpg	2                        	0.0000
 ./textrecognition/demo_image/demo_9.jpg	2                        	0.0000
 ./textrecognition/demo_image/demo_10.jpg	2                        	0.0000
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+./image/origin_image.png 	i                        	0.0000
+./image/origin_image.png_resized.jpg	i                        	0.0000
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+./textrecognition/demo_image/demo_1.png	c                        	0.0000
+./textrecognition/demo_image/demo_2.jpg	c                        	0.0000
+./textrecognition/demo_image/demo_3.png	c                        	0.0000
+./textrecognition/demo_image/demo_4.png	c                        	0.0000
+./textrecognition/demo_image/demo_5.png	c                        	0.0000
+./textrecognition/demo_image/demo_6.png	c                        	0.0000
+./textrecognition/demo_image/demo_7.png	c                        	0.0000
+./textrecognition/demo_image/demo_8.jpg	c                        	0.0000
+./textrecognition/demo_image/demo_9.jpg	c                        	0.0000
+./textrecognition/demo_image/demo_10.jpg	c                        	0.0000
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+./textrecognition/demo_image/demo_1.png	툼                        	0.0000
+./textrecognition/demo_image/demo_2.jpg	툼                        	0.0000
+./textrecognition/demo_image/demo_3.png	툼                        	0.0000
+./textrecognition/demo_image/demo_4.png	툼                        	0.0000
+./textrecognition/demo_image/demo_5.png	툼                        	0.0000
+./textrecognition/demo_image/demo_6.png	툼                        	0.0000
+./textrecognition/demo_image/demo_7.png	툼                        	0.0000
+./textrecognition/demo_image/demo_8.jpg	툼                        	0.0000
+./textrecognition/demo_image/demo_9.jpg	툼                        	0.0000
+./textrecognition/demo_image/demo_10.jpg	툼                        	0.0000
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+./textrecognition/demo_image/demo_1.png	루쫓                       	0.0000
+./textrecognition/demo_image/demo_2.jpg	루쫓                       	0.0000
+./textrecognition/demo_image/demo_3.png	루쫓                       	0.0000
+./textrecognition/demo_image/demo_4.png	루쫓                       	0.0000
+./textrecognition/demo_image/demo_5.png	쫓                        	0.0000
+./textrecognition/demo_image/demo_6.png	쫓                        	0.0000
+./textrecognition/demo_image/demo_7.png	루쫓                       	0.0000
+./textrecognition/demo_image/demo_8.jpg	루쫓                       	0.0000
+./textrecognition/demo_image/demo_9.jpg	루쫓                       	0.0000
+./textrecognition/demo_image/demo_10.jpg	루쫓                       	0.0000
