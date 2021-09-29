@@ -60,3 +60,95 @@ image_path               	predicted_labels         	confidence score
 image/KakaoTalk_Image_2021-09-28-21-52-48.jpeg	이                        	0.0215
 image/origin_image.png   	이                        	0.0213
 image/origin_image.png_resized.jpg	이리                       	0.0005
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+image/origin_image0.jpg  	이                        	0.0240
+image/origin_image.jpg   	이이                       	0.0008
+image/origin_image.jpg_resized.jpg	이이                       	0.0008
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+image/origin_image0.jpg  	coa                      	0.0012
+image/origin_image.jpg   	이기                       	0.0007
+image/origin_image.jpg_resized.jpg	이                        	0.0260
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+image/origin_image0.jpg  	coi                      	0.0013
+image/origin_image.jpg   	이리                       	0.0006
+image/origin_image.jpg_resized.jpg	이리                       	0.0006
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+image/origin_image0.jpg  	이리                       	0.0004
+image/origin_image1.jpg  	to                       	0.0053
+image/origin_image2.jpg  	t                        	0.0314
+image/origin_image3.jpg  	이이                       	0.0012
+image/origin_image4.jpg  	coi                      	0.0014
+image/origin_image5.jpg  	cae                      	0.0012
+image/origin_image.jpg   	이                        	0.0193
+image/origin_image.jpg_resized.jpg	이                        	0.0193
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+image/origin_image0.jpg  	s이                       	0.0008
+image/origin_image1.jpg  	그                        	0.0242
+image/origin_image2.jpg  	to                       	0.0032
+image/origin_image3.jpg  	이                        	0.0127
+image/origin_image4.jpg  	이이                       	0.0006
+image/origin_image5.jpg  	sae                      	0.0002
+image/origin_image6.jpg  	t                        	0.0339
+image/origin_image7.jpg  	이이                       	0.0012
+image/origin_image8.jpg  	이                        	0.0192
+image/origin_image9.jpg  	t                        	0.0261
+image/origin_image10.jpg 	co                       	0.0050
+image/origin_image11.jpg 	t                        	0.0449
+image/origin_image12.jpg 	이리                       	0.0006
+image/origin_image.jpg   	이이                       	0.0009
+image/origin_image.jpg_resized.jpg	이이                       	0.0009
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+image/origin_image.jpg   	이                        	0.0249
+image/origin_image.jpg_resized.jpg	이                        	0.0249
+image/origin_image_0.jpg 	t                        	0.0419
+image/origin_image_1.jpg 	t                        	0.0418
+image/origin_image_2.jpg 	to                       	0.0047
+image/origin_image_3.jpg 	co                       	0.0070
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+image/origin_image.jpg   	이이                       	0.0008
+image/origin_image.jpg_resized.jpg	이이                       	0.0008
+image/origin_image_0.jpg 	이이                       	0.0007
+image/origin_image_1.jpg 	이이                       	0.0007
+image/origin_image_2.jpg 	to                       	0.0047
+image/origin_image_3.jpg 	co                       	0.0070
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+image/origin_image.jpg   	이이                       	0.0009
+image/origin_image.jpg_resized.jpg	이이                       	0.0009
+image/origin_image_0.jpg 	co                       	0.0011
+image/origin_image_1.jpg 	이이                       	0.0009
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+image/origin_image.jpg   	이리                       	0.0006
+image/origin_image.jpg_resized.jpg	이리                       	0.0006
+image/origin_image_0.jpg 	caae                     	0.0001
+image/origin_image_1.jpg 	saa                      	0.0011
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+image/crop_image/origin_image_0.jpg	그                        	0.0202
+image/crop_image/origin_image_1.jpg	ca                       	0.0072
+image/crop_image/origin_image_2.jpg	sae                      	0.0011
+image/crop_image/origin_image_3.jpg	coae                     	0.0001
+image/crop_image/origin_image_4.jpg	caa                      	0.0011
+image/crop_image/origin_image_5.jpg	coai                     	0.0001
+image/crop_image/origin_image_6.jpg	caa                      	0.0012
+image/crop_image/origin_image_7.jpg	cae                      	0.0010
+image/origin_image.jpg   	이                        	0.0199
+image/origin_image.jpg_resized.jpg	이                        	0.0199
