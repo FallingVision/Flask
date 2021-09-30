@@ -93,8 +93,6 @@ def uploadImage(file=None):
 
     extract_text_list = [o['recognition_words'] for o in kakao_output['result']]
 
-    print(f"{bcolors.OKGREEN}SUCCESS: {bcolors.ENDC}",
-          f"{bcolors.BOLD}{extract_text_list}{bcolors.ENDC}")
     
     temp_idx = 0
     
@@ -110,7 +108,7 @@ def uploadImage(file=None):
             if(temp < temp2):
                 temp = temp2
                 temp_idx = i
-                
+        print(f"{bcolors.OKGREEN}SUCCESS: {bcolors.ENDC}"f"{bcolors.BOLD}{extract_text_list[temp_idx]}{bcolors.ENDC}")
         data = json.dumps({"category": category, "main_text_idx": temp_idx, "text_list": extract_text_list, "error": False})
     else :
         data = json.dumps({"category": category, "main_text_idx": temp_idx, "text_list": [], "error": True})
