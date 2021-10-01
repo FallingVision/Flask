@@ -152,3 +152,339 @@ image/crop_image/origin_image_6.jpg	caa                      	0.0012
 image/crop_image/origin_image_7.jpg	cae                      	0.0010
 image/origin_image.jpg   	이                        	0.0199
 image/origin_image.jpg_resized.jpg	이                        	0.0199
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+./image/crop_image/origin_image_0.jpg	victoria                 	0.6959
+./image/crop_image/origin_image_1.jpg	mi                       	0.0784
+./image/crop_image/origin_image_2.jpg	yv                       	0.1301
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+./image/crop_image/origin_image_0.jpg	10가지                     	0.9050
+./image/crop_image/origin_image_1.jpg	과채의                      	0.5404
+./image/crop_image/origin_image_2.jpg	찾한수                      	0.1877
+./image/crop_image/origin_image_3.jpg	토레타                      	0.4787
+./image/crop_image/origin_image_4.jpg	새장진                      	0.0008
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+./image/crop_image/origin_image_0.jpg	c                        	0.6706
+./image/crop_image/origin_image_1.jpg	ck87                     	0.1192
+./image/crop_image/origin_image_2.jpg	gateron                  	0.9194
+./image/crop_image/origin_image_3.jpg	j                        	0.2833
+./image/crop_image/origin_image_4.jpg	gateron                  	0.9615
+./image/crop_image/origin_image_5.jpg	wit                      	0.9640
+./image/crop_image/origin_image_6.jpg	monion                   	0.0013
+./image/crop_image/origin_image_7.jpg	whit                     	0.9376
+./image/crop_image/origin_image_8.jpg	8zkeys                   	0.0552
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+./image/crop_image/origin_image_0.jpg	gos                      	0.0078
+./image/crop_image/origin_image_1.jpg	버형이                      	0.1002
+./image/crop_image/origin_image_2.jpg	적은                       	0.6138
+./image/crop_image/origin_image_3.jpg	고온에서도                    	0.1975
+./image/crop_image/origin_image_4.jpg	친환경집시                    	0.0068
+./image/crop_image/origin_image_5.jpg	ecofriendl               	0.2098
+./image/crop_image/origin_image_6.jpg	platl                    	0.3706
+./image/crop_image/origin_image_7.jpg	10입                      	0.7838
+./image/crop_image/origin_image_8.jpg	2020071g                 	0.0076
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+./image/crop_image/origin_image_0.jpg	sos                      	0.1861
+./image/crop_image/origin_image_1.jpg	버형이                      	0.1754
+./image/crop_image/origin_image_2.jpg	적은                       	0.6477
+./image/crop_image/origin_image_3.jpg	고온에서도                    	0.2085
+./image/crop_image/origin_image_4.jpg	친환경집시                    	0.0228
+./image/crop_image/origin_image_5.jpg	ecofriendly              	0.2575
+./image/crop_image/origin_image_6.jpg	plate                    	0.9858
+./image/crop_image/origin_image_7.jpg	10입                      	0.7680
+./image/crop_image/origin_image_8.jpg	2021010                  	0.0119
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+./image/crop_image/origin_image_0.jpg	dr                       	0.4352
+./image/crop_image/origin_image_1.jpg	ck87                     	0.1005
+./image/crop_image/origin_image_2.jpg	gateron                  	0.5364
+./image/crop_image/origin_image_3.jpg	gateronsint              	0.0359
+./image/crop_image/origin_image_4.jpg	hechemenengong           	0.0000
+./image/crop_image/origin_image_5.jpg	w                        	0.1514
+./image/crop_image/origin_image_6.jpg	81key                    	0.1718
+./image/crop_image/origin_image_7.jpg	10입                      	0.7680
+./image/crop_image/origin_image_8.jpg	2021010                  	0.0119
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+./image/crop_image/origin_image_0.jpg	sos                      	0.0146
+./image/crop_image/origin_image_1.jpg	버형이적은                    	0.0095
+./image/crop_image/origin_image_2.jpg	고온에서도                    	0.2439
+./image/crop_image/origin_image_3.jpg	친환경집시                    	0.0115
+./image/crop_image/origin_image_4.jpg	ecofriendly              	0.2792
+./image/crop_image/origin_image_5.jpg	plate                    	0.9887
+./image/crop_image/origin_image_6.jpg	10입                      	0.6238
+./image/crop_image/origin_image_7.jpg	3na111n                  	0.0001
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+./image/crop_image/origin_image_0.jpg	sot                      	0.0208
+./image/crop_image/origin_image_1.jpg	고온에서도                    	0.2968
+./image/crop_image/origin_image_2.jpg	버형이                      	0.1428
+./image/crop_image/origin_image_3.jpg	적은                       	0.6128
+./image/crop_image/origin_image_4.jpg	친환경집시                    	0.0122
+./image/crop_image/origin_image_5.jpg	ecofriendyy              	0.1383
+./image/crop_image/origin_image_6.jpg	plate                    	0.9872
+./image/crop_image/origin_image_7.jpg	10입                      	0.6716
+./image/crop_image/origin_image_8.jpg	isimi                    	0.0605
+./image/crop_image/origin_image_9.jpg	jjel                     	0.0779
+./image/crop_image/origin_image_10.jpg	sanll                    	0.0057
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+./image/crop_image/origin_image_0.jpg	10가지                     	0.9049
+./image/crop_image/origin_image_1.jpg	과채의                      	0.5658
+./image/crop_image/origin_image_2.jpg	찾한수                      	0.1765
+./image/crop_image/origin_image_3.jpg	토레태                      	0.1804
+./image/crop_image/origin_image_4.jpg	저람                       	0.0022
+./image/crop_image/origin_image_5.jpg	ecofriendyy              	0.1383
+./image/crop_image/origin_image_6.jpg	plate                    	0.9872
+./image/crop_image/origin_image_7.jpg	10입                      	0.6716
+./image/crop_image/origin_image_8.jpg	isimi                    	0.0605
+./image/crop_image/origin_image_9.jpg	jjel                     	0.0779
+./image/crop_image/origin_image_10.jpg	sanll                    	0.0057
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+./image/crop_image/origin_image_0.jpg	10가지                     	0.9075
+./image/crop_image/origin_image_1.jpg	과채의                      	0.5882
+./image/crop_image/origin_image_2.jpg	찾한수                      	0.1647
+./image/crop_image/origin_image_3.jpg	토레타                      	0.7650
+./image/crop_image/origin_image_4.jpg	서람수                      	0.0002
+./image/crop_image/origin_image_5.jpg	ecofriendyy              	0.1383
+./image/crop_image/origin_image_6.jpg	plate                    	0.9872
+./image/crop_image/origin_image_7.jpg	10입                      	0.6716
+./image/crop_image/origin_image_8.jpg	isimi                    	0.0605
+./image/crop_image/origin_image_9.jpg	jjel                     	0.0779
+./image/crop_image/origin_image_10.jpg	sanll                    	0.0057
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+./image/crop_image/origin_image_0.jpg	10가지                     	0.9192
+./image/crop_image/origin_image_1.jpg	과채의                      	0.6248
+./image/crop_image/origin_image_2.jpg	찾한구                      	0.0655
+./image/crop_image/origin_image_3.jpg	토레타!                     	0.8465
+./image/crop_image/origin_image_4.jpg	이이                       	0.0098
+./image/crop_image/origin_image_5.jpg	ecofriendyy              	0.1383
+./image/crop_image/origin_image_6.jpg	plate                    	0.9872
+./image/crop_image/origin_image_7.jpg	10입                      	0.6716
+./image/crop_image/origin_image_8.jpg	isimi                    	0.0605
+./image/crop_image/origin_image_9.jpg	jjel                     	0.0779
+./image/crop_image/origin_image_10.jpg	sanll                    	0.0057
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+./image/crop_image/origin_image_0.jpg	dr                       	0.5306
+./image/crop_image/origin_image_1.jpg	ck87                     	0.1338
+./image/crop_image/origin_image_2.jpg	gateron                  	0.4745
+./image/crop_image/origin_image_3.jpg	m                        	0.0326
+./image/crop_image/origin_image_4.jpg	gateron                  	0.3539
+./image/crop_image/origin_image_5.jpg	switch                   	0.4418
+./image/crop_image/origin_image_6.jpg	mengongyngong            	0.0000
+./image/crop_image/origin_image_7.jpg	87key                    	0.1156
+./image/crop_image/origin_image_8.jpg	white                    	0.8168
+./image/crop_image/origin_image_9.jpg	jjel                     	0.0779
+./image/crop_image/origin_image_10.jpg	sanll                    	0.0057
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+./image/crop_image/origin_image_0.jpg	cy                       	0.1471
+./image/crop_image/origin_image_1.jpg	ck87                     	0.1476
+./image/crop_image/origin_image_2.jpg	gateron                  	0.2941
+./image/crop_image/origin_image_3.jpg	gateron                  	0.9611
+./image/crop_image/origin_image_4.jpg	switci                   	0.5941
+./image/crop_image/origin_image_5.jpg	mecontangeng             	0.0000
+./image/crop_image/origin_image_6.jpg	white                    	0.9729
+./image/crop_image/origin_image_7.jpg	87keys                   	0.2038
+./image/crop_image/origin_image_8.jpg	white                    	0.8168
+./image/crop_image/origin_image_9.jpg	jjel                     	0.0779
+./image/crop_image/origin_image_10.jpg	sanll                    	0.0057
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+./image/crop_image/origin_image_0.jpg	cdx                      	0.2004
+./image/crop_image/origin_image_1.jpg	ck8z                     	0.1193
+./image/crop_image/origin_image_2.jpg	gateran                  	0.2943
+./image/crop_image/origin_image_3.jpg	ul                       	0.3389
+./image/crop_image/origin_image_4.jpg	m                        	0.0394
+./image/crop_image/origin_image_5.jpg	s                        	0.3493
+./image/crop_image/origin_image_6.jpg	gateron                  	0.9612
+./image/crop_image/origin_image_7.jpg	switch                   	0.9256
+./image/crop_image/origin_image_8.jpg	merontong                	0.0000
+./image/crop_image/origin_image_9.jpg	87keys                   	0.1521
+./image/crop_image/origin_image_10.jpg	white                    	0.9734
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+./image/crop_image/origin_image_0.jpg	dx                       	0.1799
+./image/crop_image/origin_image_1.jpg	ck87                     	0.1279
+./image/crop_image/origin_image_2.jpg	gateran                  	0.6472
+./image/crop_image/origin_image_3.jpg	gattrnn                  	0.0800
+./image/crop_image/origin_image_4.jpg	gwlto                    	0.0835
+./image/crop_image/origin_image_5.jpg	mechangangg              	0.0002
+./image/crop_image/origin_image_6.jpg	87keys                   	0.1824
+./image/crop_image/origin_image_7.jpg	whit                     	0.9568
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+./image/crop_image/origin_image_0.jpg	10가지                     	0.9046
+./image/crop_image/origin_image_1.jpg	과채의                      	0.5760
+./image/crop_image/origin_image_2.jpg	찾한수                      	0.0892
+./image/crop_image/origin_image_3.jpg	토레타!                     	0.3235
+./image/crop_image/origin_image_4.jpg	아이                       	0.0921
+./image/crop_image/origin_image_5.jpg	mechangangg              	0.0002
+./image/crop_image/origin_image_6.jpg	87keys                   	0.1824
+./image/crop_image/origin_image_7.jpg	whit                     	0.9568
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+./image/crop_image/origin_image_0.jpg	10가지                     	0.8934
+./image/crop_image/origin_image_1.jpg	과채의                      	0.5774
+./image/crop_image/origin_image_2.jpg	찾한수운                     	0.0215
+./image/crop_image/origin_image_3.jpg	토레타                      	0.3191
+./image/crop_image/origin_image_4.jpg	jon                      	0.0161
+./image/crop_image/origin_image_5.jpg	pin                      	0.2807
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+./image/crop_image/origin_image_0.jpg	10가지                     	0.9098
+./image/crop_image/origin_image_1.jpg	과채의                      	0.6442
+./image/crop_image/origin_image_2.jpg	찾한수                      	0.1933
+./image/crop_image/origin_image_3.jpg	토레태                      	0.3467
+./image/crop_image/origin_image_4.jpg	정탈호                      	0.0028
+./image/crop_image/origin_image_5.jpg	pin                      	0.2807
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+./image/crop_image/origin_image_0.jpg	10가지                     	0.8753
+./image/crop_image/origin_image_1.jpg	과채의                      	0.6264
+./image/crop_image/origin_image_2.jpg	찾한수                      	0.1967
+./image/crop_image/origin_image_3.jpg	토레태!                     	0.1893
+./image/crop_image/origin_image_4.jpg	정클통                      	0.0008
+./image/crop_image/origin_image_5.jpg	pin                      	0.2807
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+./image/crop_image/origin_image_0.jpg	10가지                     	0.9158
+./image/crop_image/origin_image_1.jpg	과채의                      	0.6235
+./image/crop_image/origin_image_2.jpg	찾한우                      	0.1233
+./image/crop_image/origin_image_3.jpg	호테타                      	0.1032
+./image/crop_image/origin_image_4.jpg	1클                       	0.0127
+./image/crop_image/origin_image_5.jpg	pin                      	0.2807
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+./image/crop_image/origin_image_0.jpg	10가지                     	0.9080
+./image/crop_image/origin_image_1.jpg	과채의                      	0.5770
+./image/crop_image/origin_image_2.jpg	찾한수은                     	0.0346
+./image/crop_image/origin_image_3.jpg	호레타!                     	0.1696
+./image/crop_image/origin_image_4.jpg	정탈호                      	0.0129
+./image/crop_image/origin_image_5.jpg	pin                      	0.2807
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+./image/crop_image/origin_image_0.jpg	10가지                     	0.9223
+./image/crop_image/origin_image_1.jpg	과채의                      	0.4984
+./image/crop_image/origin_image_2.jpg	찾한수                      	0.2019
+./image/crop_image/origin_image_3.jpg	토레타!                     	0.5438
+./image/crop_image/origin_image_4.jpg	정림                       	0.1935
+./image/crop_image/origin_image_5.jpg	pin                      	0.2807
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+./image/crop_image/origin_image_0.jpg	0가지과의의                   	0.0623
+./image/crop_image/origin_image_1.jpg	찾한수                      	0.1722
+./image/crop_image/origin_image_2.jpg	토레타!                     	0.8102
+./image/crop_image/origin_image_3.jpg	저클호                      	0.0005
+./image/crop_image/origin_image_4.jpg	정림                       	0.1935
+./image/crop_image/origin_image_5.jpg	pin                      	0.2807
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+./image/crop_image/origin_image_0.jpg	10가지                     	0.9152
+./image/crop_image/origin_image_1.jpg	과채의                      	0.6168
+./image/crop_image/origin_image_2.jpg	찾한수은                     	0.0587
+./image/crop_image/origin_image_3.jpg	토레타!                     	0.5904
+./image/crop_image/origin_image_4.jpg	고리리                      	0.0071
+./image/crop_image/origin_image_5.jpg	pin                      	0.2807
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+./image/crop_image/origin_image_0.jpg	10가지                     	0.9043
+./image/crop_image/origin_image_1.jpg	과채의                      	0.6036
+./image/crop_image/origin_image_2.jpg	찾한수드                     	0.0536
+./image/crop_image/origin_image_3.jpg	토레타!                     	0.6136
+./image/crop_image/origin_image_4.jpg	정활통                      	0.0058
+./image/crop_image/origin_image_5.jpg	pin                      	0.2807
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+./image/crop_image/origin_image_0.jpg	bon                      	0.0004
+./image/crop_image/origin_image_1.jpg	변형이                      	0.2629
+./image/crop_image/origin_image_2.jpg	적은                       	0.6451
+./image/crop_image/origin_image_3.jpg	nu                       	0.1805
+./image/crop_image/origin_image_4.jpg	고소에서노                    	0.0454
+./image/crop_image/origin_image_5.jpg	친환경                      	0.1440
+./image/crop_image/origin_image_6.jpg	ecofrenedl               	0.1182
+./image/crop_image/origin_image_7.jpg	plate                    	0.9874
+./image/crop_image/origin_image_8.jpg	10g!                     	0.2157
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+./image/crop_image/origin_image_0.jpg	dx                       	0.3646
+./image/crop_image/origin_image_1.jpg	ck87                     	0.1066
+./image/crop_image/origin_image_2.jpg	gateron                  	0.9264
+./image/crop_image/origin_image_3.jpg	gateronssong             	0.0023
+./image/crop_image/origin_image_4.jpg	herangangong             	0.0000
+./image/crop_image/origin_image_5.jpg	white                    	0.5601
+./image/crop_image/origin_image_6.jpg	8jkeys                   	0.1259
+./image/crop_image/origin_image_7.jpg	plate                    	0.9874
+./image/crop_image/origin_image_8.jpg	10g!                     	0.2157
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+./image/crop_image/origin_image_0.jpg	ck87                     	0.0922
+./image/crop_image/origin_image_1.jpg	다x                       	0.1258
+./image/crop_image/origin_image_2.jpg	gateron                  	0.9125
+./image/crop_image/origin_image_3.jpg	gatfran                  	0.5597
+./image/crop_image/origin_image_4.jpg	swit                     	0.9135
+./image/crop_image/origin_image_5.jpg	mechenttingong           	0.0000
+./image/crop_image/origin_image_6.jpg	8zkeys                   	0.1504
+./image/crop_image/origin_image_7.jpg	whit                     	0.9022
+./image/crop_image/origin_image_8.jpg	10g!                     	0.2157
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+./image/crop_image/origin_image_0.jpg	10가지                     	0.9188
+./image/crop_image/origin_image_1.jpg	과채의                      	0.6179
+./image/crop_image/origin_image_2.jpg	찾한구                      	0.1346
+./image/crop_image/origin_image_3.jpg	토레타!                     	0.3107
+./image/crop_image/origin_image_4.jpg	정탈호                      	0.0007
+./image/crop_image/origin_image_5.jpg	mechenttingong           	0.0000
+./image/crop_image/origin_image_6.jpg	8zkeys                   	0.1504
+./image/crop_image/origin_image_7.jpg	whit                     	0.9022
+./image/crop_image/origin_image_8.jpg	10g!                     	0.2157
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+./image/crop_image/origin_image_0.jpg	sos                      	0.0158
+./image/crop_image/origin_image_1.jpg	변형이                      	0.2410
+./image/crop_image/origin_image_2.jpg	적은                       	0.6152
+./image/crop_image/origin_image_3.jpg	2손에서노                    	0.0127
+./image/crop_image/origin_image_4.jpg	진환경집시                    	0.0158
+./image/crop_image/origin_image_5.jpg	ecofriendly              	0.0954
+./image/crop_image/origin_image_6.jpg	plate                    	0.9839
+./image/crop_image/origin_image_7.jpg	10g                      	0.5565
+./image/crop_image/origin_image_8.jpg	son                      	0.0220
+./image/crop_image/origin_image_9.jpg	1x기l                     	0.0140
+./image/crop_image/origin_image_10.jpg	202ico1t                 	0.0013

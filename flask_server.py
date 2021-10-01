@@ -44,7 +44,7 @@ def test():
                         help='number of data loading workers', default=4)
     parser.add_argument('--batch_size', type=int,
                         default=192, help='input batch size')
-    parser.add_argument('--saved_model', required=True,
+    parser.add_argument('--saved_model',
                         help="path to saved_model to evaluation", default='./best_accuracy.pth')
     """ Data processing """
     parser.add_argument('--batch_max_length', type=int,
@@ -102,10 +102,23 @@ def test():
     opt.num_gpu = torch.cuda.device_count()
 
     demo(opt)
+    lst=[]
     with open('./result.txt', 'rb') as f:
-        predict = f.read()
+        # line_num = 1
+        # line_data= f.readline()
+        # while line_data:
+        predict = f.readlines()
+
+        #     lst.append(predict)
+        #     line_num+=1
+        #predict = f.readline()
+        #lst.append(predict)
     # text()
-    return predict
+    for i in range(0,len(predict)):
+        predict[i]=predict[i].decode('utf-8')
+        predict[i]=predict[i][:-1]
+    lst= [[o] for o in predict]
+    return lst
 
 
 class bcolors:
@@ -132,6 +145,7 @@ def kakao_ocr_resize(image_path: str):
         image_path = "{}_resized.jpg".format(image_path)
         cv2.imwrite(image_path, image)
         return image_path
+
     return None
 
 # @app.route('/upload-image', methods=['POST'])
@@ -216,7 +230,28 @@ def uploadImage(file=None):
 
     kakao_output = requests.post(
         API_URL, headers=headers, files={"image": data}).json()
-    print(kakao_output)
+    print(f'--------------------------------------')
+    print(f'------{bcolors.OKGREEN}kakao recognition words{bcolors.ENDC}---------')
+    print(f'--------------------------------------')
+    for i in range(0,len(kakao_output['result'])):  
+        print('recognition_words:      ',kakao_output['result'][i]['recognition_words'][0])
+
+    temp_idx = 0
+    
+    if len(kakao_output['result']) > 0 and len(kakao_output['result'][0]) > 0 :
+        temp = kakao_output['result'][0]['boxes'][2][1] - \
+        kakao_output['result'][0]['boxes'][1][1] 
+        
+        product_name = kakao_output['result'][0]['recognition_words'][0]
+    
+        for i in range(1, len(kakao_output['result'])):
+            temp2 = kakao_output['result'][i]['boxes'][2][1] - \
+                kakao_output['result'][i]['boxes'][1][1]
+            if(temp < temp2):
+                temp = temp2
+                temp_idx = i
+    
+    
     image = Image.open(resize_impath)
 
     SAVED_CROP_PATH='image/crop_image/origin_image.jpg'
@@ -227,14 +262,12 @@ def uploadImage(file=None):
         max(kakao_output['result'][i]['boxes'][3][1],kakao_output['result'][i]['boxes'][2][1]))
         crop_img=image.crop(area)
 
-        # crop_file_name=SAVED_IMAGE_PATH[:-4]+'_{}.jpg'.format(i+1)
-        
-        # crop_img=image[kakao_output['result'][i]['boxes'][3][1]:kakao_output['result'][i]['boxes'][3][1]-kakao_output['result'][i]['boxes'][0][1],
-        #kakao_output['result'][i]['boxes'][3][0]:kakao_output['result'][i]['boxes'][3][0]-kakao_output['result'][i]['boxes'][2][0]]
         crop_file_name=SAVED_CROP_PATH[:-4]+'_'+str(i)+'.jpg'
-        #crop_img.save(crop_file_name)
         crop_img.save(crop_file_name)
-    return test()
+    text_list=test()
+    print(text_list)
+    data = json.dumps({"category": category, "main_text_idx": 1, "text_list": text_list, "error": False})
+    return data
 
 @app.route('/inference', methods=['POST'])
 def inference():
