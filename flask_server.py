@@ -1,3 +1,6 @@
+from models.classification.image_classification import predictLabel
+import json
+import requests
 import torch.nn.functional as F
 import torch.utils.data
 import torch.backends.cudnn as cudnn
@@ -17,25 +20,15 @@ from textrecognition.demo import demo
 app = Flask(__name__)
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-import requests
-import json
 #from model import CNN
-from models.classification.image_classification import predictLabel
 
 LIMIT_PX = 1024
 LIMIT_BYTE = 1024*1024
 LIMIT_BOX = 40
 
+
 @app.route('/test', methods=['GET'])
 def test():
-    #MODEL_PATH = './best_accuracy.pth'
-    #device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-
-    # checkpoint = torch.load(MODEL_PATH, map_location="cpu")
-    # optimizer = SGD(model, 0.1)
-
-    # model = TextModel.Model(optimizer)
-    # model.eval()
     # -*- coding: utf-8 -*-
     parser = argparse.ArgumentParser()
     parser.add_argument('--image_folder', required=True,
@@ -102,22 +95,13 @@ def test():
     opt.num_gpu = torch.cuda.device_count()
 
     demo(opt)
-    lst=[]
-    with open('./result.txt', 'rb') as f:
-        # line_num = 1
-        # line_data= f.readline()
-        # while line_data:
-        predict = f.readlines()
 
-        #     lst.append(predict)
-        #     line_num+=1
-        #predict = f.readline()
-        #lst.append(predict)
-    # text()
-    for i in range(0,len(predict)):
-        predict[i]=predict[i].decode('utf-8')
-        predict[i]=predict[i][:-1]
-    lst= [[o] for o in predict]
+    with open('./result.txt', 'rb') as f:
+        predict = f.readlines()
+    for i in range(0, len(predict)):
+        predict[i] = predict[i].decode('utf-8')
+        predict[i] = predict[i][:-1]
+    lst = [[o] for o in predict]
     return lst
 
 
@@ -172,8 +156,7 @@ def kakao_ocr_resize(image_path: str):
 
 #     kakao_output = requests.post(
 #         API_URL, headers=headers, files={"image": data}).json()
-        
- 
+
 
 #     for i in range(1, len(kakao_output['result'])):
 #         if len(kakao_output['result'][i]['recognition_words'][0]) == 0 :
@@ -184,26 +167,26 @@ def kakao_ocr_resize(image_path: str):
 
 #     print(f"{bcolors.OKGREEN}SUCCESS: {bcolors.ENDC}",
 #           f"{bcolors.BOLD}{extract_text_list}{bcolors.ENDC}")
-    
+
 #     temp_idx = 0
-    
+
 #     if len(kakao_output['result']) > 0 and len(kakao_output['result'][0]) > 0 :
 #         temp = kakao_output['result'][0]['boxes'][2][1] - \
-#         kakao_output['result'][0]['boxes'][1][1] 
-        
+#         kakao_output['result'][0]['boxes'][1][1]
+
 #         product_name = kakao_output['result'][0]['recognition_words'][0]
-    
+
 #         for i in range(1, len(kakao_output['result'])):
 #             temp2 = kakao_output['result'][i]['boxes'][2][1] - \
 #                 kakao_output['result'][i]['boxes'][1][1]
 #             if(temp < temp2):
 #                 temp = temp2
 #                 temp_idx = i
-                
+
 #         data = json.dumps({"category": category, "main_text_idx": temp_idx, "text_list": extract_text_list, "error": False})
 #     else :
 #         data = json.dumps({"category": category, "main_text_idx": temp_idx, "text_list": [], "error": True})
-    
+
 #     return data
 
 @app.route('/upload-image', methods=['POST'])
@@ -231,43 +214,46 @@ def uploadImage(file=None):
     kakao_output = requests.post(
         API_URL, headers=headers, files={"image": data}).json()
     print(f'--------------------------------------')
-    print(f'------{bcolors.OKGREEN}kakao recognition words{bcolors.ENDC}---------')
+    print(
+        f'------{bcolors.OKGREEN}kakao recognition words{bcolors.ENDC}---------')
     print(f'--------------------------------------')
-    for i in range(0,len(kakao_output['result'])):  
-        print('recognition_words:      ',kakao_output['result'][i]['recognition_words'][0])
+    for i in range(0, len(kakao_output['result'])):
+        print('recognition_words:      ',
+              kakao_output['result'][i]['recognition_words'][0])
 
     temp_idx = 0
-    
-    if len(kakao_output['result']) > 0 and len(kakao_output['result'][0]) > 0 :
+
+    if len(kakao_output['result']) > 0 and len(kakao_output['result'][0]) > 0:
         temp = kakao_output['result'][0]['boxes'][2][1] - \
-        kakao_output['result'][0]['boxes'][1][1] 
-        
+            kakao_output['result'][0]['boxes'][1][1]
+
         product_name = kakao_output['result'][0]['recognition_words'][0]
-    
+
         for i in range(1, len(kakao_output['result'])):
             temp2 = kakao_output['result'][i]['boxes'][2][1] - \
                 kakao_output['result'][i]['boxes'][1][1]
             if(temp < temp2):
                 temp = temp2
                 temp_idx = i
-    
-    
+
     image = Image.open(resize_impath)
 
-    SAVED_CROP_PATH='image/crop_image/origin_image.jpg'
-    #image = Image.open(RESIZED_IMAGE_PATH)
-    for i in range(0,len(kakao_output['result'])):
-        area= (kakao_output['result'][i]['boxes'][0][0],kakao_output['result'][i]['boxes'][0][1],
-        max(kakao_output['result'][i]['boxes'][1][0],kakao_output['result'][i]['boxes'][2][0]),
-        max(kakao_output['result'][i]['boxes'][3][1],kakao_output['result'][i]['boxes'][2][1]))
-        crop_img=image.crop(area)
+    SAVED_CROP_PATH = 'image/crop_image/origin_image.jpg'
+    for i in range(0, len(kakao_output['result'])):
+        area = (kakao_output['result'][i]['boxes'][0][0], kakao_output['result'][i]['boxes'][0][1],
+                max(kakao_output['result'][i]['boxes'][1][0],
+                    kakao_output['result'][i]['boxes'][2][0]),
+                max(kakao_output['result'][i]['boxes'][3][1], kakao_output['result'][i]['boxes'][2][1]))
+        crop_img = image.crop(area)
 
-        crop_file_name=SAVED_CROP_PATH[:-4]+'_'+str(i)+'.jpg'
+        crop_file_name = SAVED_CROP_PATH[:-4]+'_'+str(i)+'.jpg'
         crop_img.save(crop_file_name)
-    text_list=test()
+    text_list = test()
     print(text_list)
-    data = json.dumps({"category": category, "main_text_idx": 1, "text_list": text_list, "error": False})
+    data = json.dumps({"category": category, "main_text_idx": temp_idx,
+                       "text_list": text_list, "error": False})
     return data
+
 
 @app.route('/inference', methods=['POST'])
 def inference():
