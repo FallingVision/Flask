@@ -72,8 +72,8 @@ def uploadImage(file=None):
     category = predictLabel(im)
 
     # 2) Kakao API 로 Text 검출 -> 가장 Height 큰 Text Return (임시)
-    APP_KEY = 'af23d4b5ea3248412227a7bce9609752'
-    API_URL = 'https://dapi.kakao.com/v2/vision/text/ocr'
+    APP_KEY = '###############################'
+    API_URL = '###############################'
     headers = {'Authorization': 'KakaoAK {}'.format(APP_KEY)}
 
     resize_impath = kakao_ocr_resize(SAVED_IMAGE_PATH)
